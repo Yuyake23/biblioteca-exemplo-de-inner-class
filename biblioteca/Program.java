@@ -8,8 +8,17 @@ public class Program {
         Livro livro = new Livro("Dom Casmurro", "Machado de Assis", 1899);
         biblioteca.cadastrarLivro(livro);
 
+        // Forma tradicional
         biblioteca.emprestar(livro);
         biblioteca.devolver(livro);
+
+
+        // Forma com inner class
+        // Biblioteca.LivroControler controler = biblioteca.new LivroControler(livro);
+        Biblioteca.LivroControler controler = biblioteca.getControlerFor(livro);
+
+        controler.emprestar();
+        controler.devolver();
     }
 
 //    A classe biblioteca.Livro está sobrecarregada com várias responsabilidades,
