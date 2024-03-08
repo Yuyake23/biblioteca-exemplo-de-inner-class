@@ -14,8 +14,7 @@ public class Program {
 
 
         // Forma com inner class
-        // Biblioteca.LivroControler controler = biblioteca.new LivroControler(livro);
-        Biblioteca.LivroControler controler = biblioteca.getControlerFor(livro);
+        Biblioteca.LivroControler controler = biblioteca.new LivroControler(livro);
 
         controler.emprestar();
         controler.devolver();

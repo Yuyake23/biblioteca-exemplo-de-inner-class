@@ -55,16 +55,12 @@ public class Biblioteca {
         }
     }
 
-    public LivroControler getControlerFor(Livro livro){
-        return new LivroControler(livro);
-    }
-
     public class LivroControler {
 
         private Livro livro;
 
-        public LivroControler(Livro livro){
-            if(!Biblioteca.this.livros.containsKey(livro)){
+        public LivroControler(Livro livro) {
+            if (!Biblioteca.this.livros.containsKey(livro)) {
                 throw new IllegalArgumentException("O livro não existe!");
             }
             this.livro = livro;
